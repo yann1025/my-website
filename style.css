@@ -504,6 +504,151 @@ a {
     color: var(--primary-dark);
 }
 
+/* ===== 我的项目 ===== */
+.projects {
+    background: #f0fdf4;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-item {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #d1fae5;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(16, 185, 129, 0.2);
+    border-color: var(--primary);
+}
+
+.project-img {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-emoji {
+    font-size: 5rem;
+    transition: transform 0.4s ease;
+}
+
+.project-item:hover .project-emoji {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 1.8rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-content h3 {
+    font-size: 1.3rem;
+    color: #064e3b;
+    margin-bottom: 0.7rem;
+}
+
+.project-content p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    flex: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.proj-tag {
+    background: #d1fae5;
+    color: var(--primary-dark);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    border-top: 1px solid #d1fae5;
+}
+
+.proj-link {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.proj-link:hover {
+    color: var(--primary-dark);
+    transform: translateX(3px);
+}
+
+/* 占位卡片样式 */
+.project-placeholder-card {
+    background: repeating-linear-gradient(
+        45deg,
+        #f0fdf4,
+        #f0fdf4 10px,
+        #ecfdf5 10px,
+        #ecfdf5 20px
+    );
+    border: 2px dashed var(--primary-light);
+}
+
+.placeholder-content {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 280px;
+}
+
+.placeholder-icon {
+    font-size: 3.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    opacity: 0.6;
+}
+
+.placeholder-content h3 {
+    color: var(--primary-dark);
+    opacity: 0.8;
+}
+
+.placeholder-content p {
+    color: #888;
+    flex: none;
+}
+
 /* ===== 奖励荣誉 ===== */
 .awards {
     background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
@@ -685,6 +830,10 @@ a {
     }
 
     .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 
